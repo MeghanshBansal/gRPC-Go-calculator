@@ -1,0 +1,20 @@
+syntax="proto3";
+
+option go_package="MeghanshBansal/calculator/proto";
+
+message calculatorRequest{
+    int32 num1 = 1;
+    int32 num2 = 2;
+}
+
+message calculatorResponse{
+    int32 res = 1;
+}
+
+service calculator{
+    rpc add(calculatorRequest) returns (calculatorResponse) {};
+    rpc subtract(calculatorRequest) returns (calculatorResponse) {};
+    rpc multiply(calculatorRequest) returns (calculatorResponse) {};
+    rpc divide(calculatorRequest) returns(calculatorResponse){};
+}
+
